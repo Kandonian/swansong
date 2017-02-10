@@ -1,0 +1,10 @@
+walk 1-31
+run 40-55
+push 60-93
+pull 100-133
+idle 140-179
+Jump up and hang 190-213
+Up Ladder 220-237
+Down Ladder 240-253
+Fall / Drop down 260-279
+land 267-280

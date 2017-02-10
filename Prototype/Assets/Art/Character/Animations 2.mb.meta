@@ -1,0 +1,2835 @@
+fileFormatVersion: 2
+guid: bfe492d24883639489c13aba6c146176
+timeCreated: 1481021660
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: belt
+    100004: Body_ctrl
+    100006: bow
+    100008: buckle
+    100010: buckle2
+    100012: buckle3
+    100014: chest
+    100016: clav
+    100018: eyebrows1
+    100020: eyelash1
+    100022: Eyes1
+    100024: girl_animations:left
+    100026: group6
+    100028: Hair1
+    100030: head
+    100032: head2
+    100034: Head_ctrl
+    100036: jaw
+    100038: joint12
+    100040: joint13
+    100042: joint18
+    100044: joint19
+    100046: joint21
+    100048: joint22
+    100050: joint23
+    100052: joint24
+    100054: joint26
+    100056: joint27
+    100058: joint28
+    100060: joint29
+    100062: joint31
+    100064: joint32
+    100066: joint33
+    100068: joint34
+    100070: joint36
+    100072: joint37
+    100074: joint38
+    100076: joint39
+    100078: joint44
+    100080: joint45
+    100082: joint51
+    100084: joint52
+    100086: joint54
+    100088: joint55
+    100090: joint56
+    100092: joint57
+    100094: joint59
+    100096: joint60
+    100098: joint61
+    100100: joint62
+    100102: joint64
+    100104: joint65
+    100106: joint66
+    100108: joint67
+    100110: joint69
+    100112: joint70
+    100114: joint71
+    100116: joint72
+    100118: L_ankle
+    100120: L_ankle 1
+    100122: L_arm_IK
+    100124: L_ball_IK
+    100126: L_boot
+    100128: L_boot_buckles
+    100130: L_clav
+    100132: L_clav_ctrl
+    100134: L_elbow
+    100136: L_elbow_ctrl
+    100138: L_foot_ctrl
+    100140: L_forearm
+    100142: L_hand_ctrl
+    100144: L_heelpeel
+    100146: L_index
+    100148: L_knee
+    100150: L_knee_ctrl
+    100152: L_leg
+    100154: L_leg_IK
+    100156: L_middle
+    100158: L_pinky
+    100160: L_ring
+    100162: L_shoulder
+    100164: L_thumb
+    100166: L_toe_IK
+    100168: L_toetap
+    100170: L_wrist
+    100172: left
+    100174: lower_back
+    100176: Lower_body_ctrl
+    100178: Main_ctrl
+    100180: mid_back
+    100182: Mid_body_ctrl
+    100184: neck
+    100186: R_ankle
+    100188: R_arm_IK
+    100190: R_ball_IK
+    100192: R_boot
+    100194: R_boot_buckles
+    100196: R_clav
+    100198: R_clav_ctrl
+    100200: R_elbow
+    100202: R_elbow_ctrl
+    100204: R_foot_ctrl
+    100206: R_forearm
+    100208: R_hand_ctrl
+    100210: R_heelpeel
+    100212: R_index
+    100214: R_knee
+    100216: R_knee_ctrl
+    100218: R_leg
+    100220: R_leg_IK
+    100222: R_middle
+    100224: R_pinky
+    100226: R_ring
+    100228: R_shoulder
+    100230: R_thumb
+    100232: R_toe_IK
+    100234: R_toetap
+    100236: R_wrist
+    100238: root
+    100240: satchel
+    100242: skirt
+    100244: torso3
+    100246: Upper_body_ctrl
+    400000: //RootNode
+    400002: belt
+    400004: Body_ctrl
+    400006: bow
+    400008: buckle
+    400010: buckle2
+    400012: buckle3
+    400014: chest
+    400016: clav
+    400018: eyebrows1
+    400020: eyelash1
+    400022: Eyes1
+    400024: girl_animations:left
+    400026: group6
+    400028: Hair1
+    400030: head
+    400032: head2
+    400034: Head_ctrl
+    400036: jaw
+    400038: joint12
+    400040: joint13
+    400042: joint18
+    400044: joint19
+    400046: joint21
+    400048: joint22
+    400050: joint23
+    400052: joint24
+    400054: joint26
+    400056: joint27
+    400058: joint28
+    400060: joint29
+    400062: joint31
+    400064: joint32
+    400066: joint33
+    400068: joint34
+    400070: joint36
+    400072: joint37
+    400074: joint38
+    400076: joint39
+    400078: joint44
+    400080: joint45
+    400082: joint51
+    400084: joint52
+    400086: joint54
+    400088: joint55
+    400090: joint56
+    400092: joint57
+    400094: joint59
+    400096: joint60
+    400098: joint61
+    400100: joint62
+    400102: joint64
+    400104: joint65
+    400106: joint66
+    400108: joint67
+    400110: joint69
+    400112: joint70
+    400114: joint71
+    400116: joint72
+    400118: L_ankle
+    400120: L_ankle 1
+    400122: L_arm_IK
+    400124: L_ball_IK
+    400126: L_boot
+    400128: L_boot_buckles
+    400130: L_clav
+    400132: L_clav_ctrl
+    400134: L_elbow
+    400136: L_elbow_ctrl
+    400138: L_foot_ctrl
+    400140: L_forearm
+    400142: L_hand_ctrl
+    400144: L_heelpeel
+    400146: L_index
+    400148: L_knee
+    400150: L_knee_ctrl
+    400152: L_leg
+    400154: L_leg_IK
+    400156: L_middle
+    400158: L_pinky
+    400160: L_ring
+    400162: L_shoulder
+    400164: L_thumb
+    400166: L_toe_IK
+    400168: L_toetap
+    400170: L_wrist
+    400172: left
+    400174: lower_back
+    400176: Lower_body_ctrl
+    400178: Main_ctrl
+    400180: mid_back
+    400182: Mid_body_ctrl
+    400184: neck
+    400186: R_ankle
+    400188: R_arm_IK
+    400190: R_ball_IK
+    400192: R_boot
+    400194: R_boot_buckles
+    400196: R_clav
+    400198: R_clav_ctrl
+    400200: R_elbow
+    400202: R_elbow_ctrl
+    400204: R_foot_ctrl
+    400206: R_forearm
+    400208: R_hand_ctrl
+    400210: R_heelpeel
+    400212: R_index
+    400214: R_knee
+    400216: R_knee_ctrl
+    400218: R_leg
+    400220: R_leg_IK
+    400222: R_middle
+    400224: R_pinky
+    400226: R_ring
+    400228: R_shoulder
+    400230: R_thumb
+    400232: R_toe_IK
+    400234: R_toetap
+    400236: R_wrist
+    400238: root
+    400240: satchel
+    400242: skirt
+    400244: torso3
+    400246: Upper_body_ctrl
+    2300000: bow
+    2300002: buckle
+    2300004: buckle2
+    2300006: Hair1
+    2300008: satchel
+    3300000: bow
+    3300002: buckle
+    3300004: buckle2
+    3300006: Hair1
+    3300008: satchel
+    4300000: head2
+    4300002: Eyes1
+    4300004: eyebrows1
+    4300006: eyelash1
+    4300008: Hair1
+    4300010: bow
+    4300012: satchel
+    4300014: buckle
+    4300016: buckle2
+    4300018: skirt
+    4300020: torso3
+    4300022: belt
+    4300024: buckle3
+    4300026: R_boot
+    4300028: R_boot_buckles
+    4300030: L_boot
+    4300032: L_boot_buckles
+    7400000: walk
+    7400002: run
+    7400004: push
+    7400006: pull
+    7400008: idle
+    7400010: Jump up
+    7400012: Up ladder
+    7400014: down ladder
+    7400016: Fall / Drop
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: belt
+    13700002: buckle3
+    13700004: eyebrows1
+    13700006: eyelash1
+    13700008: Eyes1
+    13700010: head2
+    13700012: L_boot
+    13700014: L_boot_buckles
+    13700016: R_boot
+    13700018: R_boot_buckles
+    13700020: skirt
+    13700022: torso3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: girl_animations:left
+        weight: 1
+      - path: head2
+        weight: 1
+      - path: head2/eyebrows1
+        weight: 1
+      - path: head2/eyelash1
+        weight: 1
+      - path: head2/Eyes1
+        weight: 1
+      - path: L_boot
+        weight: 1
+      - path: L_boot/L_boot_buckles
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl/L_arm_IK
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/bow
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/Hair1
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/L_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/R_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle2
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl/R_arm_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel/L_leg_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_ball_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_toe_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_knee_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel/R_leg_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_ball_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_toe_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/R_knee_ctrl
+        weight: 1
+      - path: R_boot
+        weight: 1
+      - path: R_boot/R_boot_buckles
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12/joint13
+        weight: 1
+      - path: root/lower_back
+        weight: 1
+      - path: root/lower_back/mid_back
+        weight: 1
+      - path: root/lower_back/mid_back/chest
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28/joint29
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39/joint38
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33/joint34
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18/joint19
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw/head
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56/joint57
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71/joint72
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51/joint52
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44/joint45
+        weight: 1
+      - path: skirt
+        weight: 1
+      - path: torso3
+        weight: 1
+      - path: torso3/belt
+        weight: 1
+      - path: torso3/belt/buckle3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: girl_animations:left
+        weight: 1
+      - path: head2
+        weight: 1
+      - path: head2/eyebrows1
+        weight: 1
+      - path: head2/eyelash1
+        weight: 1
+      - path: head2/Eyes1
+        weight: 1
+      - path: L_boot
+        weight: 1
+      - path: L_boot/L_boot_buckles
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl/L_arm_IK
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/bow
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/Hair1
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/L_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/R_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle2
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl/R_arm_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel/L_leg_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_ball_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_toe_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_knee_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel/R_leg_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_ball_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_toe_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/R_knee_ctrl
+        weight: 1
+      - path: R_boot
+        weight: 1
+      - path: R_boot/R_boot_buckles
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12/joint13
+        weight: 1
+      - path: root/lower_back
+        weight: 1
+      - path: root/lower_back/mid_back
+        weight: 1
+      - path: root/lower_back/mid_back/chest
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28/joint29
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39/joint38
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33/joint34
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18/joint19
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw/head
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56/joint57
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71/joint72
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51/joint52
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44/joint45
+        weight: 1
+      - path: skirt
+        weight: 1
+      - path: torso3
+        weight: 1
+      - path: torso3/belt
+        weight: 1
+      - path: torso3/belt/buckle3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: push
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 93
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: girl_animations:left
+        weight: 1
+      - path: head2
+        weight: 1
+      - path: head2/eyebrows1
+        weight: 1
+      - path: head2/eyelash1
+        weight: 1
+      - path: head2/Eyes1
+        weight: 1
+      - path: L_boot
+        weight: 1
+      - path: L_boot/L_boot_buckles
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl/L_arm_IK
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/bow
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/Hair1
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/L_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/R_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle2
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl/R_arm_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel/L_leg_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_ball_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_toe_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_knee_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel/R_leg_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_ball_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_toe_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/R_knee_ctrl
+        weight: 1
+      - path: R_boot
+        weight: 1
+      - path: R_boot/R_boot_buckles
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12/joint13
+        weight: 1
+      - path: root/lower_back
+        weight: 1
+      - path: root/lower_back/mid_back
+        weight: 1
+      - path: root/lower_back/mid_back/chest
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28/joint29
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39/joint38
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33/joint34
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18/joint19
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw/head
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56/joint57
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71/joint72
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51/joint52
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44/joint45
+        weight: 1
+      - path: skirt
+        weight: 1
+      - path: torso3
+        weight: 1
+      - path: torso3/belt
+        weight: 1
+      - path: torso3/belt/buckle3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pull
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 129
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: girl_animations:left
+        weight: 1
+      - path: head2
+        weight: 1
+      - path: head2/eyebrows1
+        weight: 1
+      - path: head2/eyelash1
+        weight: 1
+      - path: head2/Eyes1
+        weight: 1
+      - path: L_boot
+        weight: 1
+      - path: L_boot/L_boot_buckles
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl/L_arm_IK
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/bow
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/Hair1
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/L_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/R_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle2
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl/R_arm_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel/L_leg_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_ball_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_toe_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_knee_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel/R_leg_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_ball_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_toe_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/R_knee_ctrl
+        weight: 1
+      - path: R_boot
+        weight: 1
+      - path: R_boot/R_boot_buckles
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12/joint13
+        weight: 1
+      - path: root/lower_back
+        weight: 1
+      - path: root/lower_back/mid_back
+        weight: 1
+      - path: root/lower_back/mid_back/chest
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28/joint29
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39/joint38
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33/joint34
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18/joint19
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw/head
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56/joint57
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71/joint72
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51/joint52
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44/joint45
+        weight: 1
+      - path: skirt
+        weight: 1
+      - path: torso3
+        weight: 1
+      - path: torso3/belt
+        weight: 1
+      - path: torso3/belt/buckle3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 140
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: girl_animations:left
+        weight: 1
+      - path: head2
+        weight: 1
+      - path: head2/eyebrows1
+        weight: 1
+      - path: head2/eyelash1
+        weight: 1
+      - path: head2/Eyes1
+        weight: 1
+      - path: L_boot
+        weight: 1
+      - path: L_boot/L_boot_buckles
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl/L_arm_IK
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/bow
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/Hair1
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/L_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/R_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle2
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl/R_arm_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel/L_leg_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_ball_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_toe_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_knee_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel/R_leg_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_ball_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_toe_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/R_knee_ctrl
+        weight: 1
+      - path: R_boot
+        weight: 1
+      - path: R_boot/R_boot_buckles
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12/joint13
+        weight: 1
+      - path: root/lower_back
+        weight: 1
+      - path: root/lower_back/mid_back
+        weight: 1
+      - path: root/lower_back/mid_back/chest
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28/joint29
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39/joint38
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33/joint34
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18/joint19
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw/head
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56/joint57
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71/joint72
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51/joint52
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44/joint45
+        weight: 1
+      - path: skirt
+        weight: 1
+      - path: torso3
+        weight: 1
+      - path: torso3/belt
+        weight: 1
+      - path: torso3/belt/buckle3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump up
+      takeName: Take 001
+      firstFrame: 190
+      lastFrame: 213
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: girl_animations:left
+        weight: 1
+      - path: head2
+        weight: 1
+      - path: head2/eyebrows1
+        weight: 1
+      - path: head2/eyelash1
+        weight: 1
+      - path: head2/Eyes1
+        weight: 1
+      - path: L_boot
+        weight: 1
+      - path: L_boot/L_boot_buckles
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl/L_arm_IK
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/bow
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/Hair1
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/L_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/R_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle2
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl/R_arm_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel/L_leg_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_ball_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_toe_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_knee_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel/R_leg_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_ball_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_toe_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/R_knee_ctrl
+        weight: 1
+      - path: R_boot
+        weight: 1
+      - path: R_boot/R_boot_buckles
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12/joint13
+        weight: 1
+      - path: root/lower_back
+        weight: 1
+      - path: root/lower_back/mid_back
+        weight: 1
+      - path: root/lower_back/mid_back/chest
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28/joint29
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39/joint38
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33/joint34
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18/joint19
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw/head
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56/joint57
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71/joint72
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51/joint52
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44/joint45
+        weight: 1
+      - path: skirt
+        weight: 1
+      - path: torso3
+        weight: 1
+      - path: torso3/belt
+        weight: 1
+      - path: torso3/belt/buckle3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Up ladder
+      takeName: Take 001
+      firstFrame: 220
+      lastFrame: 237
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: girl_animations:left
+        weight: 1
+      - path: head2
+        weight: 1
+      - path: head2/eyebrows1
+        weight: 1
+      - path: head2/eyelash1
+        weight: 1
+      - path: head2/Eyes1
+        weight: 1
+      - path: L_boot
+        weight: 1
+      - path: L_boot/L_boot_buckles
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl/L_arm_IK
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/bow
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/Hair1
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/L_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/R_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle2
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl/R_arm_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel/L_leg_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_ball_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_toe_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_knee_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel/R_leg_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_ball_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_toe_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/R_knee_ctrl
+        weight: 1
+      - path: R_boot
+        weight: 1
+      - path: R_boot/R_boot_buckles
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12/joint13
+        weight: 1
+      - path: root/lower_back
+        weight: 1
+      - path: root/lower_back/mid_back
+        weight: 1
+      - path: root/lower_back/mid_back/chest
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28/joint29
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39/joint38
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33/joint34
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18/joint19
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw/head
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56/joint57
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71/joint72
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51/joint52
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44/joint45
+        weight: 1
+      - path: skirt
+        weight: 1
+      - path: torso3
+        weight: 1
+      - path: torso3/belt
+        weight: 1
+      - path: torso3/belt/buckle3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: down ladder
+      takeName: Take 001
+      firstFrame: 240
+      lastFrame: 253
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: girl_animations:left
+        weight: 1
+      - path: head2
+        weight: 1
+      - path: head2/eyebrows1
+        weight: 1
+      - path: head2/eyelash1
+        weight: 1
+      - path: head2/Eyes1
+        weight: 1
+      - path: L_boot
+        weight: 1
+      - path: L_boot/L_boot_buckles
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl/L_arm_IK
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/bow
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/Hair1
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/L_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/R_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle2
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl/R_arm_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel/L_leg_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_ball_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_toe_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_knee_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel/R_leg_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_ball_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_toe_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/R_knee_ctrl
+        weight: 1
+      - path: R_boot
+        weight: 1
+      - path: R_boot/R_boot_buckles
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12/joint13
+        weight: 1
+      - path: root/lower_back
+        weight: 1
+      - path: root/lower_back/mid_back
+        weight: 1
+      - path: root/lower_back/mid_back/chest
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28/joint29
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39/joint38
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33/joint34
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18/joint19
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw/head
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56/joint57
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71/joint72
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51/joint52
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44/joint45
+        weight: 1
+      - path: skirt
+        weight: 1
+      - path: torso3
+        weight: 1
+      - path: torso3/belt
+        weight: 1
+      - path: torso3/belt/buckle3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fall / Drop
+      takeName: Take 001
+      firstFrame: 260
+      lastFrame: 279
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: girl_animations:left
+        weight: 1
+      - path: head2
+        weight: 1
+      - path: head2/eyebrows1
+        weight: 1
+      - path: head2/eyelash1
+        weight: 1
+      - path: head2/Eyes1
+        weight: 1
+      - path: L_boot
+        weight: 1
+      - path: L_boot/L_boot_buckles
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/L_hand_ctrl/L_arm_IK
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/bow
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/Head_ctrl/Hair1
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/L_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/Mid_body_ctrl/Upper_body_ctrl/R_clav_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/Lower_body_ctrl/satchel/buckle2
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_elbow_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl
+        weight: 1
+      - path: Main_ctrl/Body_ctrl/R_hand_ctrl/R_arm_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_heelpeel/L_leg_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_ball_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_ankle/L_toetap/L_toe_IK
+        weight: 1
+      - path: Main_ctrl/L_foot_ctrl/L_knee_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_heelpeel/R_leg_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_ball_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/group6/R_toetap/R_toe_IK
+        weight: 1
+      - path: Main_ctrl/R_foot_ctrl/R_knee_ctrl
+        weight: 1
+      - path: R_boot
+        weight: 1
+      - path: R_boot/R_boot_buckles
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/L_leg
+        weight: 1
+      - path: root/L_leg/L_knee
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12
+        weight: 1
+      - path: root/L_leg/L_knee/L_ankle 1/joint12/joint13
+        weight: 1
+      - path: root/lower_back
+        weight: 1
+      - path: root/lower_back/mid_back
+        weight: 1
+      - path: root/lower_back/mid_back/chest
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_index/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_middle/joint26/joint27/joint28/joint29
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_pinky/joint36/joint37/joint39/joint38
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_ring/joint31/joint32/joint33/joint34
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/L_clav/L_shoulder/L_elbow/L_forearm/L_wrist/L_thumb/joint18/joint19
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/neck/jaw/head
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_index/joint54/joint55/joint56/joint57
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_middle/joint59/joint60/joint61/joint62
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_pinky/joint69/joint70/joint71/joint72
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_ring/joint64/joint65/joint66/joint67
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51
+        weight: 1
+      - path: root/lower_back/mid_back/chest/clav/R_clav/R_shoulder/R_elbow/R_forearm/R_wrist/R_thumb/joint51/joint52
+        weight: 1
+      - path: root/R_leg
+        weight: 1
+      - path: root/R_leg/R_knee
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44
+        weight: 1
+      - path: root/R_leg/R_knee/R_ankle/joint44/joint45
+        weight: 1
+      - path: skirt
+        weight: 1
+      - path: torso3
+        weight: 1
+      - path: torso3/belt
+        weight: 1
+      - path: torso3/belt/buckle3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
