@@ -71,7 +71,13 @@ public class PlayerControl : MonoBehaviour {
 			CheckInputs ();
 		}
         UpdateUI();
-	}
+
+        //Escape
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 
 	void UpdateUI(){
         if(displayTimer>0.0f)
@@ -165,11 +171,6 @@ public class PlayerControl : MonoBehaviour {
 					if (isOnGround) {
 						Jump ();
 					}
-				}
-
-                //Escape
-				if (Input.GetKey (KeyCode.Escape)) {
-					Application.Quit ();
 				}
 			} else if (isOpening) {
 				doorTimer += Time.deltaTime;
@@ -418,12 +419,18 @@ public class PlayerControl : MonoBehaviour {
 
     void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "Ground") {
-			if(!isOnGround){
+			if(isClimbing)
+            {
+                isClimbing = false;
+            }
+
+            if (!isOnGround){
 				fallSpeed = 0;
 				isOnGround = true;
 				//set to idle animation
 				myAnims.PlayIdle();
 			}
+            
 		}
 	}
 

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-
 	//for movement
 	public Rigidbody myBody;
 
