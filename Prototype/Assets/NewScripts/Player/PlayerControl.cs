@@ -29,8 +29,13 @@ public class PlayerControl : MonoBehaviour {
 	bool isOnGround;
 	float fallSpeed;
 
-	//door
-	bool isTouchingDoor;
+    //drop platforms
+    public float myFullDropTime;
+    public float myCurrentDropTime;
+    public bool isAbleToDrop;
+
+    //door
+    bool isTouchingDoor;
 	GameObject doorObj;
 	float doorTimer;
 	bool isOpening;
@@ -62,6 +67,7 @@ public class PlayerControl : MonoBehaviour {
         myAnims = this.GetComponent<AnimationManager>();
         myAudio = this.GetComponent<AudioManager>();
         throwTimer = 0.0f;
+        myCurrentDropTime = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -69,7 +75,11 @@ public class PlayerControl : MonoBehaviour {
 		GroundCheck ();
 		if (inControl) {
 			CheckInputs ();
-		}
+            if (isAbleToDrop && !isClimbing)
+            {
+                CheckPlayerDropping();
+            }
+        }
         UpdateUI();
 
         //Escape
@@ -418,7 +428,8 @@ public class PlayerControl : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision col){
-		if (col.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+		if (col.gameObject.layer == LayerMask.NameToLayer("Ground") 
+            || col.gameObject.layer == LayerMask.NameToLayer("Dropable")) {
 			if(isClimbing)
             {
                 isClimbing = false;
@@ -476,6 +487,11 @@ public class PlayerControl : MonoBehaviour {
             pushableObj = col.gameObject;
             isTouchingPushable = true;
         }
+
+        if(col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
+        {
+            isAbleToDrop = true;
+        }
 	}
 
     //Temporary fix only
@@ -495,6 +511,16 @@ public class PlayerControl : MonoBehaviour {
 			ladderObj = null;
 		}
 
+        if(col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
+        {
+            isAbleToDrop = false;
+            myCurrentDropTime = 0.0f;
+            if (!isClimbing)
+            {
+                this.GetComponent<BoxCollider>().isTrigger = false;
+            }
+        }
+
         if(col.gameObject.tag == "Throwable")
         {
             isTouchingThrowable = false;
@@ -510,4 +536,27 @@ public class PlayerControl : MonoBehaviour {
             }
         }
 	}
+
+    void CheckPlayerDropping()
+    {
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            //Update the time the player has wanted to drop for
+            myCurrentDropTime += Time.deltaTime;
+
+            //If the full required time has been hit,
+            //then reset the time and drop the player
+            if (myCurrentDropTime >= myFullDropTime)
+            {
+                myCurrentDropTime = 0.0f;
+                this.GetComponent<BoxCollider>().isTrigger = true;
+                myAnims.PlayFall();
+            }
+        }
+        else
+        {
+            //reset the time incase the player hit S by accident
+            myCurrentDropTime = 0.0f;
+        }
+    }
 }
