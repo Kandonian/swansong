@@ -418,7 +418,7 @@ public class PlayerControl : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision col){
-		if (col.gameObject.tag == "Ground") {
+		if (col.gameObject.layer == LayerMask.NameToLayer("Ground")) {
 			if(isClimbing)
             {
                 isClimbing = false;
