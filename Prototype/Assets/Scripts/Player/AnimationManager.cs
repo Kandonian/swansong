@@ -61,13 +61,15 @@ public class AnimationManager : MonoBehaviour {
 	public void PlayPull(bool goingLeft)
 	{
 		ChoosingDirection(goingLeft);
-		myAnimation.Play("pull");
+        myAnimation["pull"].speed = 1.0f;
+        myAnimation.Play("pull");
 	}
 
 	public void PlayPush(bool goingLeft)
 	{
 		ChoosingDirection(goingLeft);
-		myAnimation.Play("push");
+        myAnimation["push"].speed = 1.0f;
+        myAnimation.Play("push");
 	}
 
 	public void PlayJump()
@@ -126,6 +128,12 @@ public class AnimationManager : MonoBehaviour {
     {
         myAnimation["Up ladder"].speed = 0.0f;
         myAnimation["down ladder"].speed = 0.0f;
+    }
+
+    public void PausePushPull()
+    {
+        myAnimation["push"].speed = 0.0f;
+        myAnimation["pull"].speed = 0.0f;
     }
 
 	void ChoosingDirection(bool goingLeft)

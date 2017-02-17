@@ -17,6 +17,9 @@ public class PlayerControl : MonoBehaviour {
 	//shards
 	int shardsCollected;
 	public Text txtShardsCollected;
+    public Image imageShards;
+    float displayTimer;
+    public float UIDisplayTime;
 
 	//jumping
 	bool isJumping;
@@ -43,6 +46,11 @@ public class PlayerControl : MonoBehaviour {
     bool isHoldingThrowable, wasHoldingThrowable;
     float throwTimer;
 
+    //push/pull
+    bool isTouchingPushable;
+    GameObject pushableObj;
+    bool isPushing, isPushingFromLeft;
+
 	//moving
 	public float moveSpeed;
 	public float runSpeed;
@@ -62,16 +70,35 @@ public class PlayerControl : MonoBehaviour {
 		if (inControl) {
 			CheckInputs ();
 		}
-		UpdateUI ();
+        UpdateUI();
 	}
 
 	void UpdateUI(){
-		txtShardsCollected.text = shardsCollected.ToString ();
+        if(displayTimer>0.0f)
+        {
+            displayTimer -= Time.deltaTime;
+        }
+        else
+        {
+            txtShardsCollected.enabled = false;
+            imageShards.enabled = false;
+        }
 	}
+
+    void ShowUI()
+    {
+        //Set the time for the UI to display
+        displayTimer = UIDisplayTime;
+
+        //Do appropriate steps to show the UI
+        txtShardsCollected.enabled = true;
+        imageShards.enabled = true;
+        txtShardsCollected.text = shardsCollected.ToString();
+    }
 
 	void CheckInputs(){
 			//make sure we are not opening a door
-			if (!isOpening && !isClimbing) {
+			if (!isOpening && !isClimbing && !isPushing) {
 				//move left and right, right always takes prio
 				if (!Input.GetKey (KeyCode.LeftShift)) {
 					if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
@@ -114,6 +141,11 @@ public class PlayerControl : MonoBehaviour {
                     if(isTouchingThrowable)
                     {
                         PickUpThrowable();
+                    }
+
+                    if(isTouchingPushable && isOnGround)
+                    {   
+                        InitialPush();
                     }
 				}
                 //Get ready to throw if required
@@ -170,6 +202,22 @@ public class PlayerControl : MonoBehaviour {
 					}
 				}
 			}
+            else if(isPushing)
+            {
+                PushMovement();
+              
+                //Stop pushing the object under the below conditions
+                if(Input.GetKeyDown(KeyCode.E) || transform.position.y>=pushableObj.transform.position.y + 5.0f 
+                || transform.position.y < pushableObj.transform.position.y - 5.0f)
+                {
+                    isPushing = false;
+                    isTouchingPushable = false;
+                    myAnims.PlayIdle();
+                    myBody.velocity = new Vector3(0.0f, myBody.velocity.y, 0.0f);
+                    pushableObj.GetComponent<Pushing>().RemoveParent();
+                    pushableObj = null;
+                }
+            }
 	}
 
 	void ClimbLadder(){
@@ -298,7 +346,77 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
-	void OnCollisionEnter(Collision col){
+    void PushMovement()
+    {
+        if (isPushingFromLeft)
+        {
+            //Take in general movement, right direction takes priority
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) 
+                && (!pushableObj.GetComponent<Pushing>().refuseMoveRight))
+            {
+                myBody.velocity = new Vector3(moveSpeed * 0.7f, myBody.velocity.y, 0.0f);
+                myAnims.PlayPull(isPushingFromLeft);
+            }
+            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) 
+                && (!pushableObj.GetComponent<Pushing>().refuseMoveLeft))
+            {
+                myBody.velocity = new Vector3(-moveSpeed * 0.7f, myBody.velocity.y, 0.0f);
+                myAnims.PlayPush(isPushingFromLeft);
+            }
+            else
+            {
+                //There has been no movement
+                myAnims.PausePushPull();
+                myBody.velocity = new Vector3(0.0f, myBody.velocity.y, 0.0f);
+            }
+        }
+        else
+        {
+            //Take in general movement, right direction takes priority
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                && (!pushableObj.GetComponent<Pushing>().refuseMoveRight))
+            {
+                myBody.velocity = new Vector3(moveSpeed * 0.7f, myBody.velocity.y, 0.0f);
+                myAnims.PlayPush(isPushingFromLeft);
+            }
+            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) 
+                && (!pushableObj.GetComponent<Pushing>().refuseMoveLeft))
+            {
+                myBody.velocity = new Vector3(-moveSpeed * 0.7f, myBody.velocity.y, 0.0f);
+                myAnims.PlayPull(isPushingFromLeft);
+            }
+            else
+            {
+                //There has been no movement
+                myAnims.PausePushPull();
+                myBody.velocity = new Vector3(0.0f, myBody.velocity.y, 0.0f);
+            }
+        }
+    }
+
+    void InitialPush()
+    {
+        isPushing = true;
+
+        //Work out the way the player should face
+        if(transform.position.x < pushableObj.transform.position.x)
+        {
+            isPushingFromLeft = false;
+        }
+        else
+        {
+            isPushingFromLeft = true;
+        }
+
+        //Play the push animation while facing the right way
+        //Then pause the animation since the player is not yet moving
+        myAnims.PlayPush(isPushingFromLeft);
+        myAnims.PausePushPull();
+
+        pushableObj.GetComponent<Pushing>().SetParent(isPushingFromLeft);
+    }
+
+    void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "Ground") {
 			if(!isOnGround){
 				fallSpeed = 0;
@@ -336,6 +454,7 @@ public class PlayerControl : MonoBehaviour {
             myAudio.CrystalCollect();
 			Destroy(col.gameObject);
 			shardsCollected ++;
+            ShowUI();
 		}
 
         //the collection for throwable objects
@@ -343,6 +462,12 @@ public class PlayerControl : MonoBehaviour {
         {
             throwableObj = col.gameObject;
             isTouchingThrowable = true;
+        }
+
+        if(col.gameObject.tag == "Pushable" && !isPushing)
+        {
+            pushableObj = col.gameObject;
+            isTouchingPushable = true;
         }
 	}
 
@@ -367,6 +492,15 @@ public class PlayerControl : MonoBehaviour {
         {
             isTouchingThrowable = false;
             throwableObj = null;
+        }
+
+        if(col.gameObject.tag == "Pushable")
+        {
+            if (!isPushing)
+            {
+                isTouchingPushable = false;
+                pushableObj = null;
+            }
         }
 	}
 }

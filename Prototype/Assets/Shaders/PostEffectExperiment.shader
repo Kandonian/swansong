@@ -3,6 +3,7 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
+		_VignetteStrength("VignetteStrength", float) = 0.5
 	}
 	SubShader
 	{
@@ -36,15 +37,23 @@
 				o.uv = v.uv;
 				return o;
 			}
-			
+
 			sampler2D _MainTex;
+			float _VignetteStrength;
 
 			fixed4 frag (v2f i) : SV_Target
 			{
-				fixed4 col = tex2D(_MainTex, i.uv);				
 
+				float timeFactor = (1.0f + sin(_Time))/1.0f;
+				float2 nCoord = i.vertex.xy/_ScreenParams.xy;
+				fixed4 col = tex2D(_MainTex, nCoord);		
+				float2 centeredCoord = nCoord - 0.5f;
 
-				return col;
+				float dist = sqrt(dot( centeredCoord, centeredCoord));
+
+				float vig = dist * _VignetteStrength;
+
+				return fixed4(lerp(col, fixed4(0,0,0,1.0f), vig));
 			}
 			ENDCG
 		}
