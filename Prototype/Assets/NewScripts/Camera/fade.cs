@@ -25,15 +25,22 @@ public class fade : MonoBehaviour {
 
     void FadeIn()
     {
-        speed /= 2;
+        speed /= 1.1f;
         vignette -= (Time.deltaTime * speed);
-        GetComponent<PostEffectControl>().vignette = vignette;
+
+        if(vignette <= 10)
+        {
+            speed = 20.0f;
+        }
 
         if (vignette <= 0)
         {
             fadeIn = false;
             speed = 2;
+            vignette = 0;
         }
+
+        GetComponent<PostEffectControl>().vignette = vignette;
     }
 
     void FadeOut()
@@ -44,6 +51,7 @@ public class fade : MonoBehaviour {
 
         if(vignette >=80)
         {
+            speed = 400f;
             fadeOut = false;
         }
     }
