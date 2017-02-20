@@ -156,6 +156,29 @@ public class AnimationManager : MonoBehaviour {
 		}
 	}
 
+    public void PausePushPullAfter()
+    {
+        if(myAnimation.IsPlaying("push"))
+        {
+            //Round to 1 d.p. in order to more easily check the animation is divisible by 1 roughly
+            float nonDecTime = (float)System.Math.Round(myAnimation["push"].normalizedTime, 1);
+            
+            if(nonDecTime % 1 == 0)
+            {
+                PausePushPull();
+            }
+        }
+        else if(myAnimation.IsPlaying("pull"))
+        {
+            float nonDecTime = (float)System.Math.Round(myAnimation["pull"].normalizedTime, 1);
+
+            if (nonDecTime % 1 == 0)
+            {
+                PausePushPull();
+            }
+        }
+    }
+
     public bool FacingLeft()
     {
         return facingLeft;

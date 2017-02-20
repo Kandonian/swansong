@@ -43,8 +43,6 @@
 
 			fixed4 frag (v2f i) : SV_Target
 			{
-
-				float timeFactor = (1.0f + sin(_Time))/1.0f;
 				float2 nCoord = i.vertex.xy/_ScreenParams.xy;
 				fixed4 col = tex2D(_MainTex, nCoord);		
 				float2 centeredCoord = nCoord - 0.5f;

@@ -399,7 +399,8 @@ public class PlayerControl : MonoBehaviour {
             else
             {
                 //There has been no movement
-                myAnims.PausePushPull();
+                myAnims.PausePushPullAfter();        //Pause the animations after the remainder has been played
+                                                
                 myBody.velocity = new Vector3(0.0f, myBody.velocity.y, 0.0f);
             }
         }

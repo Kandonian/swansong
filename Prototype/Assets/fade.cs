@@ -1,0 +1,50 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class fade : MonoBehaviour {
+    public float speed;
+    float vignette;
+    public bool fadeOut, fadeIn;
+	// Use this for initialization
+	void Start () {
+        vignette = GetComponent<PostEffectControl>().vignette;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        if (fadeOut)
+        {
+            FadeOut();
+        }
+        else if(fadeIn)
+        {
+            FadeIn();
+        }
+	}
+
+    void FadeIn()
+    {
+        speed /= 2;
+        vignette -= (Time.deltaTime * speed);
+        GetComponent<PostEffectControl>().vignette = vignette;
+
+        if (vignette <= 0)
+        {
+            fadeIn = false;
+            speed = 2;
+        }
+    }
+
+    void FadeOut()
+    {
+        vignette += (Time.deltaTime * speed);
+        speed *= 1.5f;
+        GetComponent<PostEffectControl>().vignette = vignette;
+
+        if(vignette >=80)
+        {
+            fadeOut = false;
+        }
+    }
+}
