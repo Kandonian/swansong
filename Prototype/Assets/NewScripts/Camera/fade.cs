@@ -52,6 +52,7 @@ public class fade : MonoBehaviour {
         if(vignette >=80)
         {
             speed = 400f;
+			vignette = 80.0f;
             fadeOut = false;
         }
     }
