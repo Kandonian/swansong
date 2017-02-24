@@ -87,11 +87,6 @@ public class PlayerControl : MonoBehaviour {
         }
         UpdateUI();
 
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            CullNext();
-        }
-
         //Escape
         if (Input.GetKey(KeyCode.Escape))
         {
