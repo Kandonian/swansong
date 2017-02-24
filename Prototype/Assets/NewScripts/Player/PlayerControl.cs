@@ -50,6 +50,7 @@ public class PlayerControl : MonoBehaviour {
     GameObject throwableObj;
     bool isHoldingThrowable, wasHoldingThrowable;
     float throwTimer;
+    public Vector2 throwSpeed;
 
     //push/pull
     bool isTouchingPushable;
@@ -60,6 +61,10 @@ public class PlayerControl : MonoBehaviour {
 	public float moveSpeed;
 	public float runSpeed;
 	public float climbingSpeed;
+
+    //for culling abilities
+    int cullNum = -1;
+    bool cullPush, cullPick, cullClimb;
 
 	// Use this for initialization
 	void Start () {
@@ -81,6 +86,11 @@ public class PlayerControl : MonoBehaviour {
             }
         }
         UpdateUI();
+
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            CullNext();
+        }
 
         //Escape
         if (Input.GetKey(KeyCode.Escape))
@@ -143,37 +153,46 @@ public class PlayerControl : MonoBehaviour {
 				}
 
                 //Interactions currently
-				if (Input.GetKeyDown (KeyCode.E)) {
-					if (isTouchingDoor) {
-						if (!doorObj.GetComponent<Door> ().isOpen) {
-							OpenDoor ();
-						}
+				if (Input.GetKeyDown (KeyCode.E))
+                {
+                         //If the push/pull ability is still in use
+                        if (!cullPush)
+                        {
+                            if (isTouchingDoor)
+                            {
+                                if (!doorObj.GetComponent<Door>().isOpen)
+                                {
+                                    OpenDoor();
+                                }
+                            }
+                        }
+
+                        if (isTouchingPushable && isOnGround)
+                        {
+                            InitialPush();
+                        }
+                    
+
+                    //if the player can climb and is allowed to
+                    if (isTouchingLadder && !cullClimb)
+                    {
+						    ClimbLadder ();
 					}
 
-					if (isTouchingLadder) {
-						ClimbLadder ();
-					}
-
-                    if(isTouchingThrowable)
+                    if(isTouchingThrowable && !cullPick)
                     {
                         PickUpThrowable();
-                    }
-
-                    if(isTouchingPushable && isOnGround)
-                    {   
-                        InitialPush();
                     }
 				}
                 //Get ready to throw if required
                 else if(Input.GetKey (KeyCode.E) && wasHoldingThrowable)
                 {
-                    ThrowingAbility();
+                    throwTimer += Time.deltaTime;
                 }
                 else if(Input.GetKeyUp(KeyCode.E) && wasHoldingThrowable)
                 {
-                    throwTimer = 0.0f;
-                    wasHoldingThrowable = false;
-                    throwableObj.GetComponent<Throwing>().RemoveParent();
+                    int strength = (int)System.Math.Round(throwTimer);
+                    ThrowingAbility(strength);     
                 }
 
                 //Jump section
@@ -215,7 +234,10 @@ public class PlayerControl : MonoBehaviour {
 			}
             else if(isPushing)
             {
-                PushMovement();
+                if (!cullPush)
+                {
+                    PushMovement();
+                }
               
                 //Stop pushing the object under the below conditions
                 if(Input.GetKeyDown(KeyCode.E) || transform.position.y>=pushableObj.transform.position.y + 5.0f 
@@ -243,6 +265,23 @@ public class PlayerControl : MonoBehaviour {
 			transform.position = new Vector3(ladderObj.transform.position.x,transform.position.y,transform.position.z);
 		}
 	}
+
+    void CullNext()
+    {
+        cullNum++;
+
+        switch(cullNum)
+        {
+            case 0: cullPush = true;
+                break;
+            case 1: cullClimb = true;
+                break;
+            case 2: cullPick = true;
+                break;
+            default:
+                break;
+        }
+    }
 
 	void OpenDoor(){
 		isOpening = true;
@@ -316,29 +355,23 @@ public class PlayerControl : MonoBehaviour {
 		}
 	}
 
-    void ThrowingAbility()
+    void ThrowingAbility(int Strength)
     {
-        if (throwTimer >= 1.0f)
-        {
-            throwableObj.GetComponent<Throwing>().RemoveParent();
+       
+        throwableObj.GetComponent<Throwing>().RemoveParent();
 
-            //Dependant on direction
-            if (myAnims.FacingLeft())
-            { 
-                throwableObj.GetComponent<Rigidbody>().velocity = new Vector3(-15.0f, 10.0f, 0.0f);
-            }
-            else
-            {
-                throwableObj.GetComponent<Rigidbody>().velocity = new Vector3(15.0f, 10.0f, 0.0f);
-            }
-
-            throwTimer = 0.0f;
-            wasHoldingThrowable = false;
+        //Dependant on direction
+        if (myAnims.FacingLeft())
+        { 
+            throwableObj.GetComponent<Rigidbody>().velocity = new Vector3(-throwSpeed.x * Strength, throwSpeed.y * Strength, 0.0f);
         }
         else
         {
-            throwTimer += Time.deltaTime;
+            throwableObj.GetComponent<Rigidbody>().velocity = new Vector3(throwSpeed.x * Strength, throwSpeed.y * Strength, 0.0f);
         }
+
+        throwTimer = 0.0f;
+        wasHoldingThrowable = false;
     }
 
     void PickUpThrowable()
@@ -495,7 +528,7 @@ public class PlayerControl : MonoBehaviour {
         }
 	}
 
-    //Temporary fix only
+    
     void OnTriggerStay(Collider col)
     {
         //the collection for throwable objects
