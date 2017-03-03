@@ -206,6 +206,7 @@ public class PlayerControl : MonoBehaviour {
 				isOnGround = false;
 
 				if (!isTouchingLadder) {
+					myBody.useGravity = true;
 					isClimbing = false;
 					myAnims.PlayIdle ();
 				} else {
@@ -222,6 +223,7 @@ public class PlayerControl : MonoBehaviour {
 
 					if (Input.GetKeyDown (KeyCode.E)) {
 						isClimbing = false;
+						myBody.useGravity = true;
 						myAnims.PlayIdle ();
 						myBody.velocity = new Vector3 (0, 400 * Time.deltaTime, 0);
 					}
@@ -249,16 +251,13 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 	void ClimbLadder(){
-		if (isClimbing) {
-			isClimbing = false;
-			isTouchingLadder = false;
-			ladderObj = null;
-		} else {
+		
+			myBody.useGravity = false;
 			myAnims.PlayClimbingUp();
 			myAnims.PauseClimbingAnimations();
 			isClimbing = true;
 			transform.position = new Vector3(ladderObj.transform.position.x,transform.position.y,transform.position.z);
-		}
+	
 	}
 
     void CullNext()
@@ -457,8 +456,9 @@ public class PlayerControl : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision col){
-		if (col.gameObject.layer == LayerMask.NameToLayer("Ground") 
-            || col.gameObject.layer == LayerMask.NameToLayer("Dropable")) {
+		if ((col.gameObject.layer == LayerMask.NameToLayer("Ground") 
+            || col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
+            && col.transform.position.y < (this.transform.position.y)) {
 			if(isClimbing)
             {
                 isClimbing = false;
@@ -529,13 +529,30 @@ public class PlayerControl : MonoBehaviour {
         //the collection for throwable objects
         if (col.gameObject.tag == "Throwable")
         {
-            throwableObj = col.gameObject;
             isTouchingThrowable = true;
+			if (throwableObj == null) {
+				throwableObj = col.gameObject;
+			}
         }
+
+		if (col.gameObject.tag == "Ladder") {
+			isTouchingLadder = true;
+			if (ladderObj == null) {
+				ladderObj = col.gameObject;
+			}
+		}
+
+		if (col.gameObject.tag == "Door") {
+			isTouchingDoor = true;
+			if (doorObj == null) {
+				doorObj = col.gameObject;
+			}
+		}
     }
 
 	void OnTriggerExit(Collider col){
 		if (col.gameObject.tag == "Ladder") {
+			myBody.useGravity = true;
 			isTouchingLadder = false;
 			ladderObj = null;
 		}
