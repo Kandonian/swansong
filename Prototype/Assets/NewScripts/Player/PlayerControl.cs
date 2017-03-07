@@ -458,7 +458,7 @@ public class PlayerControl : MonoBehaviour {
     void OnCollisionEnter(Collision col){
 		if ((col.gameObject.layer == LayerMask.NameToLayer("Ground") 
             || col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
-            && col.transform.position.y < (this.transform.position.y)) {
+            && col.transform.position.y < (this.transform.position.y + 0.1f)) {
 			if(isClimbing)
             {
                 isClimbing = false;
