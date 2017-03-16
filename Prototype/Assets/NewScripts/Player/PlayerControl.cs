@@ -22,11 +22,13 @@ public class PlayerControl : MonoBehaviour {
     public float UIDisplayTime;
 
 	//jumping
-	bool isJumping;
 	bool isPreJumping;
 
+    //Fixing landing stuff
+    bool justAboveGround;
+
 	//falling
-	bool isOnGround;
+	public bool isOnGround;
 	float fallSpeed;
 
     //drop platforms
@@ -331,11 +333,20 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 	void GroundCheck(){
-		if (!isOnGround && !isClimbing) {
+        if (!isOnGround && !isClimbing) {
 			//play falling animation
-			if(!isPreJumping){
+			if(!isPreJumping && !justAboveGround){
 				myAnims.PlayFall();
 			}
+            else if (!isPreJumping && justAboveGround)
+            {
+                if (myBody.velocity.y <= 1.0f)
+                {
+                    myBody.velocity = new Vector3(myBody.velocity.x, myBody.velocity.y - 0.5f, 0);
+                    fallSpeed = 0.0f;
+                    isOnGround = true;
+                }
+            }
 			if(fallSpeed < 1.75){
 				fallSpeed += 0.025f;
 				myBody.velocity = new Vector3(myBody.velocity.x,myBody.velocity.y - fallSpeed,0);
@@ -456,22 +467,22 @@ public class PlayerControl : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision col){
-		if ((col.gameObject.layer == LayerMask.NameToLayer("Ground") 
-            || col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
-            && col.transform.position.y < (this.transform.position.y + 0.1f)) {
-			if(isClimbing)
+        if ((col.gameObject.layer == LayerMask.NameToLayer("Ground")
+            || col.gameObject.layer == LayerMask.NameToLayer("Dropable")))
+            {
+            if (isClimbing && col.transform.position.y < (this.transform.position.y + 0.1f))
             {
                 isClimbing = false;
             }
 
-            if (!isOnGround){
-				fallSpeed = 0;
-				isOnGround = true;
-				//set to idle animation
-				myAnims.PlayIdle();
-			}
-            
-		}
+            if (!isOnGround) {
+                fallSpeed = 0;
+                isOnGround = true;
+                //set to idle animation
+                myAnims.PlayIdle();
+            }
+
+        }
 	}
 
 	void OnCollisionExit(Collision col){
@@ -519,9 +530,15 @@ public class PlayerControl : MonoBehaviour {
 
         if(col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
         {
+            justAboveGround = true;
             isAbleToDrop = true;
         }
-	}
+
+        if (col.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            justAboveGround = true;
+        }
+    }
 
     
     void OnTriggerStay(Collider col)
@@ -557,9 +574,15 @@ public class PlayerControl : MonoBehaviour {
 			ladderObj = null;
 		}
 
+        if (col.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            justAboveGround = false;
+        }
+
         if(col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
         {
             isAbleToDrop = false;
+            justAboveGround = false;
             myCurrentDropTime = 0.0f;
             if (!isClimbing)
             {
