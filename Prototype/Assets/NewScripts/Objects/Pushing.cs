@@ -27,11 +27,11 @@ public class Pushing : MonoBehaviour {
 
         if(!NegativeX)
         {
-            distance = new Vector2(3.0f, -0.0f);
+            distance = new Vector2(2.3f, -0.0f);
         }
         else
         {
-            distance = new Vector2(-3.0f, -0.0f);
+            distance = new Vector2(2.3f, -0.0f);
         }
         
     }

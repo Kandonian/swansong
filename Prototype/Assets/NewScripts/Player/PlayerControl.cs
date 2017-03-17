@@ -189,6 +189,10 @@ public class PlayerControl : MonoBehaviour {
                 else if(Input.GetKeyUp(KeyCode.E) && wasHoldingThrowable)
                 {
                     int strength = (int)System.Math.Round(throwTimer);
+                    if(strength > 3)
+                    {
+                        strength = 3;
+                    }
                     ThrowingAbility(strength);     
                 }
 
@@ -297,7 +301,7 @@ public class PlayerControl : MonoBehaviour {
 
 	void Jump(){
 		myAnims.PlayJump ();
-		myBody.velocity = new Vector3 (0, 15, 0);
+		myBody.velocity = new Vector3 (0, 20, 0);
 		isOnGround = false;
 		isPreJumping = true;
 	}
@@ -340,7 +344,7 @@ public class PlayerControl : MonoBehaviour {
 			}
             else if (!isPreJumping && justAboveGround)
             {
-                if (myBody.velocity.y <= 1.0f)
+                if (myBody.velocity.y >= -0.5f)
                 {
                     myBody.velocity = new Vector3(myBody.velocity.x, myBody.velocity.y - 0.5f, 0);
                     fallSpeed = 0.0f;
@@ -539,7 +543,6 @@ public class PlayerControl : MonoBehaviour {
             justAboveGround = true;
         }
     }
-
     
     void OnTriggerStay(Collider col)
     {

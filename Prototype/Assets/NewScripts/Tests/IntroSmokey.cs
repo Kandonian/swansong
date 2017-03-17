@@ -15,7 +15,7 @@ public class IntroSmokey : MonoBehaviour {
 
 	public int curStage;
 
-	public PlayerControl myPlayer;
+	//public PlayerUpdater myPlayer;
 
 	// Use this for initialization
 	void Start () {
@@ -37,7 +37,7 @@ public class IntroSmokey : MonoBehaviour {
 			transform.position = Vector3.SmoothDamp (transform.position, targetPosition, ref velocity, smoothTime);
 			waitTimer += Time.deltaTime;
 			if(waitTimer > 1f){
-				myPlayer.inControl = true;
+				//myPlayer.inControl = true;
 			}
 		}
 	}
