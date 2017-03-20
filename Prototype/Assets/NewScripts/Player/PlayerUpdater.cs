@@ -12,9 +12,6 @@ public class PlayerUpdater : MonoBehaviour {
     AnimationManager myAnims;
     AudioManager myAudio;
 
-    //For holding the camera's room position
-    public ZoneCamera myZoneCam;
-
     //if the character is in control
     public bool inControl;
 
@@ -30,12 +27,26 @@ public class PlayerUpdater : MonoBehaviour {
     public float moveSpeed, runSpeed, climbingSpeed;
 
     //Ground checks
-    bool isOnGround, justAboveGround;
+    bool isOnGround, isAbleToDrop;
+
+    //drop platforms
+    public float myFullDropTime;
+    float myCurrentDropTime;
 
     //For jumping checks
-    bool isPreJumping;
+    bool isGoingUp;
     float fallingSpeed = 0.0f;
+
+    //For holding all interactions booleans
+    bool isTouchingPushable, isPushing, isPushingFromLeft;
     
+    //For holding all gameobjects
+    GameObject pushableObj;
+ 
+    //for culling abilities
+    int cullNum = -1;
+    bool cullPush, cullPick, cullClimb;
+
     // Use this for initialization
     void Start () {
         //Create pointers to the needed scripts and objects
@@ -48,7 +59,8 @@ public class PlayerUpdater : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        GroundCheck();
+        //Check for any updates whether the player is controlled, or not
+        NonMovementUpdates();
 
         //While the player is being controlled
 		if(inControl)
@@ -56,8 +68,15 @@ public class PlayerUpdater : MonoBehaviour {
             CheckInputs();
         }
 
+    }
+
+    void NonMovementUpdates()
+    {
+        //Check if the player is on the ground
+        GroundCheck();
+
         //Update the UI timer when it is being shown
-        if(showingUI)
+        if (showingUI)
         {
             UpdateUI();
         }
@@ -69,45 +88,123 @@ public class PlayerUpdater : MonoBehaviour {
         }
     }
 
-   //UI functions
-    void UpdateUI()
+    public void CullNext()
     {
-        if (displayTimer > 0.0f)
-        {
-            displayTimer -= Time.deltaTime;
-        }
-        else
-        {
-            txtShardsCollected.enabled = false;
-            imageShards.enabled = false;
-            showingUI = false;
-        }
-    }
-    void ShowUI()
-    {
-        //Set the time for the UI to display
-        displayTimer = UIDisplayTime;
+        cullNum++;
 
-        //Do appropriate steps to show the UI
-        txtShardsCollected.enabled = true;
-        imageShards.enabled = true;
-        txtShardsCollected.text = shardsCollected.ToString();
-        showingUI = true;
+        switch (cullNum)
+        {
+            case 0:
+                cullPush = true;
+                break;
+            case 1:
+                cullClimb = true;
+                break;
+            case 2:
+                cullPick = true;
+                break;
+            default:
+                break;
+        }
     }
 
     //General input taking
     void CheckInputs()
     {
-        DirectionalMovement();
-        Jump();
-      
+        if (!Interacting())
+        {
+            DirectionalMovement();
+            Jump();
+
+            if (isAbleToDrop)// && !isClimbing)
+            {
+                CheckPlayerDropping();
+            }
+
+            CanInteract();
+        }
+        else
+        {
+            if (isPushing)
+            {
+                PushMovement();
+            }
+        }
+    }
+
+    bool Interacting()
+    {
+        if(isPushing)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    void CanInteract()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            //If the push/pull ability is still in use
+            //if (!cullPush)
+            //{
+            //    if (isTouchingDoor)
+            //    {
+            //        if (!doorObj.GetComponent<Door>().isOpen)
+            //        {
+            //            OpenDoor();
+            //        }
+            //    }
+            //}
+
+            if (isTouchingPushable && isOnGround)
+            {
+                InitialPush();
+            }
+        }
     }
 
     void GroundCheck()
     {
-        if(!isOnGround)
+        if ((myBody.velocity.y >= -0.001f && myBody.velocity.y <= 0.001f) & !isGoingUp)
         {
+            isOnGround = true;
+        }
+        else
+        { 
+            isOnGround = false;
+        }
 
+        if(!isOnGround && !isGoingUp && myBody.velocity.y > 0)
+        {
+            myAnims.PlayJump();
+        }
+
+    }
+
+    void CheckPlayerDropping()
+    {
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            //Update the time the player has wanted to drop for
+            myCurrentDropTime += Time.deltaTime;
+
+            //If the full required time has been hit,
+            //then reset the time and drop the player
+            if (myCurrentDropTime >= myFullDropTime)
+            {
+                myCurrentDropTime = 0.0f;
+                this.GetComponent<BoxCollider>().isTrigger = true;
+                myAnims.PlayFall();
+            }
+        }
+        else
+        {
+            //reset the time incase the player hit S by accident
+            myCurrentDropTime = 0.0f;
         }
     }
 
@@ -120,20 +217,20 @@ public class PlayerUpdater : MonoBehaviour {
                 myAnims.PlayJump();
                 myBody.velocity = new Vector3(myBody.velocity.x, 15, 0);
                 isOnGround = false;
-                isPreJumping = true;
+                isGoingUp = true;
             }
         }
-        else if (!isPreJumping)
+        else if (!isGoingUp)
         {
             myAnims.PlayFall();
             fallingSpeed += Time.deltaTime;
             myBody.velocity = new Vector3(myBody.velocity.x, myBody.velocity.y - fallingSpeed, 0);
         }
-        else if (isPreJumping)
+        else if (isGoingUp)
         {
-            if(myBody.velocity.y <= 0.0f)
+            if(myBody.velocity.y <= -0.001f)
             {
-                isPreJumping = false;
+                isGoingUp = false;
                 myAnims.PlayFall();
             }
             else
@@ -151,13 +248,11 @@ public class PlayerUpdater : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
-                myAudio.Footsteps();
                 Move(false);
             }
             else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 Move(true);
-                myAudio.Footsteps();
             }
             else {
                 myBody.velocity = new Vector3(0, myBody.velocity.y, myBody.velocity.z);
@@ -179,10 +274,7 @@ public class PlayerUpdater : MonoBehaviour {
             }
             else {
                 myBody.velocity = new Vector3(0, myBody.velocity.y, myBody.velocity.z);
-                if (isOnGround)
-                {
-                    myAnims.PlayIdle();
-                }
+                myAnims.PlayIdle();
             }
         }
     }
@@ -210,6 +302,7 @@ public class PlayerUpdater : MonoBehaviour {
             if (isOnGround)
             {
                 myAnims.PlayWalk(false);
+                myAudio.Footsteps();
             }
         }
         else {
@@ -217,8 +310,118 @@ public class PlayerUpdater : MonoBehaviour {
             if (isOnGround)
             {
                 myAnims.PlayWalk(true);
+                myAudio.Footsteps();
             }
         }
+    }
+
+    void PushMovement()
+    {
+        if (isPushingFromLeft)
+        {
+            //Take in general movement, right direction takes priority
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                && (!pushableObj.GetComponent<Pushing>().refuseMoveRight))
+            {
+                myBody.velocity = new Vector3(moveSpeed * 0.7f, myBody.velocity.y, 0.0f);
+                myAnims.PlayPull(isPushingFromLeft);
+            }
+            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                && (!pushableObj.GetComponent<Pushing>().refuseMoveLeft))
+            {
+                myBody.velocity = new Vector3(-moveSpeed * 0.7f, myBody.velocity.y, 0.0f);
+                myAnims.PlayPush(isPushingFromLeft);
+            }
+            else
+            {
+                //There has been no movement
+                myAnims.PausePushPull();
+                myBody.velocity = new Vector3(0.0f, myBody.velocity.y, 0.0f);
+            }
+        }
+        else
+        {
+            //Take in general movement, right direction takes priority
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                && (!pushableObj.GetComponent<Pushing>().refuseMoveRight))
+            {
+                myBody.velocity = new Vector3(moveSpeed * 0.7f, myBody.velocity.y, 0.0f);
+                myAnims.PlayPush(isPushingFromLeft);
+            }
+            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                && (!pushableObj.GetComponent<Pushing>().refuseMoveLeft))
+            {
+                myBody.velocity = new Vector3(-moveSpeed * 0.7f, myBody.velocity.y, 0.0f);
+                myAnims.PlayPull(isPushingFromLeft);
+            }
+            else
+            {
+                //There has been no movement
+                myAnims.PausePushPullAfter();        //Pause the animations after the remainder has been played
+
+                myBody.velocity = new Vector3(0.0f, myBody.velocity.y, 0.0f);
+            }
+        }
+
+        //Stop pushing the object under the below conditions
+        if (Input.GetKeyDown(KeyCode.E) || transform.position.y >= pushableObj.transform.position.y + 5.0f
+        || transform.position.y < pushableObj.transform.position.y - 5.0f)
+        {
+            isPushing = false;
+            isTouchingPushable = false;
+            myAnims.PlayIdle();
+            myBody.velocity = new Vector3(0.0f, myBody.velocity.y, 0.0f);
+            pushableObj.GetComponent<Pushing>().RemoveParent();
+            pushableObj = null;
+        }
+    }
+
+    void InitialPush()
+    {
+        isPushing = true;
+
+        //Work out the way the player should face
+        if (transform.position.x < pushableObj.transform.position.x)
+        {
+            isPushingFromLeft = false;
+        }
+        else
+        {
+            isPushingFromLeft = true;
+        }
+
+        //Play the push animation while facing the right way
+        //Then pause the animation since the player is not yet moving
+        myAnims.PlayPush(isPushingFromLeft);
+        myAnims.PausePushPull();
+
+        pushableObj.GetComponent<Pushing>().SetParent(isPushingFromLeft);
+    }
+
+    //UI functions
+    void UpdateUI()
+    {
+        if (displayTimer > 0.0f)
+        {
+            displayTimer -= Time.deltaTime;
+        }
+        else
+        {
+            txtShardsCollected.enabled = false;
+            imageShards.enabled = false;
+            showingUI = false;
+        }
+    }
+    void ShowUI()
+    {
+        //Set the time for the UI to display
+        displayTimer = UIDisplayTime;
+
+        //Do appropriate steps to show the UI
+        txtShardsCollected.enabled = true;
+        imageShards.enabled = true;
+        txtShardsCollected.text = shardsCollected.ToString();
+        showingUI = true;
     }
 
     void OnCollisionEnter(Collision col)
@@ -227,11 +430,6 @@ public class PlayerUpdater : MonoBehaviour {
         if ((col.gameObject.layer == LayerMask.NameToLayer("Ground")
             || col.gameObject.layer == LayerMask.NameToLayer("Dropable")))
         {
-            //if (isClimbing && col.transform.position.y < (this.transform.position.y + 0.1f))
-            //{
-            //    isClimbing = false;
-            //}
-
             if (!isOnGround)
             {
                 isOnGround = true;
@@ -239,7 +437,6 @@ public class PlayerUpdater : MonoBehaviour {
                 //set to idle animation
                 myAnims.PlayIdle();
             }
-
         }
     }
 
@@ -252,6 +449,44 @@ public class PlayerUpdater : MonoBehaviour {
             shardsCollected++;
             ShowUI();
         }
+
+        if (col.gameObject.tag == "Pushable" && !isPushing)
+        {
+            pushableObj = col.gameObject;
+            isTouchingPushable = true;
+        }
+
+        if (col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
+        {
+            isOnGround = true;
+            isAbleToDrop = true;
+        }
+
+        if (col.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            isOnGround = true;
+        }
     }
 
+    void OnTriggerExit(Collider col)
+    {
+         if (col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
+        {
+            isAbleToDrop = false;
+            myCurrentDropTime = 0.0f;
+           //if (!isClimbing)
+           //{
+              this.GetComponent<BoxCollider>().isTrigger = false;
+           //}
+        }
+
+        if (col.gameObject.tag == "Pushable")
+        {
+            if (!isPushing)
+            {
+                isTouchingPushable = false;
+                pushableObj = null;
+            }
+        }
+    }
 }

@@ -31,7 +31,7 @@ public class Pushing : MonoBehaviour {
         }
         else
         {
-            distance = new Vector2(2.3f, -0.0f);
+            distance = new Vector2(-2.3f, -0.0f);
         }
         
     }

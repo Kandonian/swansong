@@ -10,8 +10,6 @@ public class PlayerControl : MonoBehaviour {
 
     AudioManager myAudio;
 
-	public ZoneCamera myZoneCam;
-
 	public bool inControl;
 
 	//shards
@@ -33,8 +31,8 @@ public class PlayerControl : MonoBehaviour {
 
     //drop platforms
     public float myFullDropTime;
-    public float myCurrentDropTime;
-    public bool isAbleToDrop;
+    float myCurrentDropTime;
+    bool isAbleToDrop;
 
     //door
     bool isTouchingDoor;
