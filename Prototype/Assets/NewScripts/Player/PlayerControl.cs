@@ -46,7 +46,7 @@ public class PlayerControl : MonoBehaviour {
 	bool isClimbing;
 
     //throwing
-    bool isTouchingThrowable;
+    bool isTouchingThrowable, isPickingUp, throwingPlaying;
     GameObject throwableObj;
     bool isHoldingThrowable, wasHoldingThrowable;
     float throwTimer;
@@ -118,151 +118,209 @@ public class PlayerControl : MonoBehaviour {
     }
 
 	void CheckInputs(){
-			//make sure we are not opening a door
-			if (!isOpening && !isClimbing && !isPushing) {
-				//move left and right, right always takes prio
-				if (!Input.GetKey (KeyCode.LeftShift)) {
-					if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
-                        myAudio.Footsteps();
-						Move (false);
-					} else if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
-						Move (true);
-                        myAudio.Footsteps();
-                } else {
-						myBody.velocity = new Vector3 (0, myBody.velocity.y, myBody.velocity.z);
-						if (isOnGround) {
-							myAnims.PlayIdle ();
-						}
-					}
-				} else {
-					if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
-						Run (false);
-					} else if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
-						Run (true);
-					} else {
-						myBody.velocity = new Vector3 (0, myBody.velocity.y, myBody.velocity.z);
-						if (isOnGround) {
-							myAnims.PlayIdle ();
-						}
-					}
-				}
-
-                //Interactions currently
-				if (Input.GetKeyDown (KeyCode.E))
-                {
-                         //If the push/pull ability is still in use
-                        if (!cullPush)
-                        {
-                            if (isTouchingDoor)
-                            {
-                                if (!doorObj.GetComponent<Door>().isOpen)
-                                {
-                                    OpenDoor();
-                                }
-                            }
-                        }
-
-                        if (isTouchingPushable && isOnGround)
-                        {
-                            InitialPush();
-                        }
-                    
-
-                    //if the player can climb and is allowed to
-                    if (isTouchingLadder && !cullClimb)
-                    {
-						    ClimbLadder ();
-					}
-
-                    if(isTouchingThrowable && !cullPick)
-                    {
-                        PickUpThrowable();
-                    }
-				}
-                //Get ready to throw if required
-                else if(Input.GetKey (KeyCode.E) && wasHoldingThrowable)
-                {
-                    throwTimer += Time.deltaTime;
-                }
-                else if(Input.GetKeyUp(KeyCode.E) && wasHoldingThrowable)
-                {
-                    int strength = (int)System.Math.Round(throwTimer);
-                    if(strength > 3)
-                    {
-                        strength = 3;
-                    }
-                    ThrowingAbility(strength);     
-                }
-
-                //Jump section
-				if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
-					if (isOnGround) {
-						Jump ();
-					}
-				}
-			} else if (isOpening) {
-				doorTimer += Time.deltaTime;
-				if (doorTimer > 0.5f) {
-					doorTimer = 0;
-					isOpening = false;
-				}
-			} else if (isClimbing) {
-				isOnGround = false;
-
-				if (!isTouchingLadder) {
-					myBody.useGravity = true;
-					isClimbing = false;
-					myAnims.PlayIdle ();
-				} else {
-					if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
-						myAnims.PlayClimbingDown ();
-						myBody.velocity = new Vector3 (0, -climbingSpeed, 0);
-					} else if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
-						myAnims.PlayClimbingUp ();
-						myBody.velocity = new Vector3 (0, climbingSpeed, 0);
-					} else {
-						myAnims.PauseClimbingAnimations ();
-						myBody.velocity = new Vector3 (0, 0, 0);
-					}
-
-					if (Input.GetKeyDown (KeyCode.E)) {
-						isClimbing = false;
-						myBody.useGravity = true;
-						myAnims.PlayIdle ();
-						myBody.velocity = new Vector3 (0, 400 * Time.deltaTime, 0);
-					}
-				}
-			}
-            else if(isPushing)
+        //make sure we are not opening a door
+        if (!isOpening && !isClimbing && !isPushing && !isPickingUp && !throwingPlaying)
+        {
+            //move left and right, right always takes prio
+            if (!Input.GetKey(KeyCode.LeftShift))
             {
-                if (!cullPush)
+                if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
                 {
-                    PushMovement();
+                    myAudio.Footsteps();
+                    Move(false);
                 }
-              
-                //Stop pushing the object under the below conditions
-                if(Input.GetKeyDown(KeyCode.E) || transform.position.y>=pushableObj.transform.position.y + 5.0f 
-                || transform.position.y < pushableObj.transform.position.y - 5.0f)
+                else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
                 {
-                    isPushing = false;
-                    isTouchingPushable = false;
-                    myAnims.PlayIdle();
-                    myBody.velocity = new Vector3(0.0f, myBody.velocity.y, 0.0f);
-                    pushableObj.GetComponent<Pushing>().RemoveParent();
-                    pushableObj = null;
+                    Move(true);
+                    myAudio.Footsteps();
+                }
+                else {
+                    myBody.velocity = new Vector3(0, myBody.velocity.y, myBody.velocity.z);
+                    if (isOnGround)
+                    {
+                        myAnims.PlayIdle();
+                    }
                 }
             }
+            else {
+                if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                {
+                    Run(false);
+                }
+                else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                {
+                    Run(true);
+                }
+                else {
+                    myBody.velocity = new Vector3(0, myBody.velocity.y, myBody.velocity.z);
+                    if (isOnGround)
+                    {
+                        myAnims.PlayIdle();
+                    }
+                }
+            }
+
+            //Interactions currently
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //If the push/pull ability is still in use
+                if (!cullPush)
+                {
+                    if (isTouchingDoor)
+                    {
+                        if (!doorObj.GetComponent<Door>().isOpen)
+                        {
+                            OpenDoor();
+                        }
+                    }
+                }
+
+                if (isTouchingPushable && isOnGround)
+                {
+                    InitialPush();
+                }
+
+
+                //if the player can climb and is allowed to
+                if (isTouchingLadder && !cullClimb)
+                {
+                    ClimbLadder();
+                }
+
+                if (isTouchingThrowable && !cullPick)
+                {
+                    PickUpThrowable();
+                }
+            }
+            //Get ready to throw if required
+            else if (Input.GetKey(KeyCode.E) && wasHoldingThrowable)
+            {
+                throwTimer += Time.deltaTime;
+            }
+            else if (Input.GetKeyUp(KeyCode.E) && wasHoldingThrowable)
+            {
+                int strength = (int)System.Math.Round(throwTimer);
+                
+                if (strength > 0)
+                {
+                    myAnims.ThrowObject();
+                    throwingPlaying = true;
+                }
+                else
+                {
+                    ThrowingAbility(strength);
+                }
+            }
+
+            //Jump section
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                if (isOnGround)
+                {
+                    Jump();
+                }
+            }
+        }
+        else if (isPickingUp)
+        {
+            PickUpThrowable();
+        }
+        else if (throwingPlaying)
+        {
+            if(myAnims.ThrowReady() && wasHoldingThrowable)
+            {
+                int strength = (int)System.Math.Round(throwTimer);
+
+                if (strength > 3)
+                {
+                    strength = 3;
+                }
+
+                ThrowingAbility(strength);
+            }
+            else
+            {
+                if (myAnims.ThrowAnimationFinished())
+                {
+                    throwingPlaying = false;
+                }
+            }
+        }
+        else if (isOpening)
+        {
+            doorTimer += Time.deltaTime;
+            if (doorTimer > 0.5f)
+            {
+                doorTimer = 0;
+                isOpening = false;
+            }
+        }
+        else if (isClimbing)
+        {
+            isOnGround = false;
+
+            if (!isTouchingLadder)
+            {
+                myBody.useGravity = true;
+                isClimbing = false;
+                myAnims.AfterClimb();
+                myAnims.PlayIdle();
+            }
+            else {
+                if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+                {
+                    myAnims.PlayClimbingDown();
+                    myBody.velocity = new Vector3(0, -climbingSpeed, 0);
+                }
+                else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+                {
+                    myAnims.PlayClimbingUp();
+                    myBody.velocity = new Vector3(0, climbingSpeed, 0);
+                }
+                else {
+                    myAnims.PauseClimbingAnimations();
+                    myBody.velocity = new Vector3(0, 0, 0);
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    isClimbing = false;
+                    myAnims.AfterClimb();
+                    myBody.useGravity = true;
+                    myAnims.PlayIdle();
+                    myBody.velocity = new Vector3(0, 400 * Time.deltaTime, 0);
+                }
+            }
+        }
+        else if (isPushing)
+        {
+            if (!cullPush)
+            {
+                PushMovement();
+            }
+
+            //Stop pushing the object under the below conditions
+            if (Input.GetKeyDown(KeyCode.E) || transform.position.y >= pushableObj.transform.position.y + 5.0f
+            || transform.position.y < pushableObj.transform.position.y - 5.0f)
+            {
+                isPushing = false;
+                isTouchingPushable = false;
+                myAnims.PlayIdle();
+                myBody.velocity = new Vector3(0.0f, myBody.velocity.y, 0.0f);
+                pushableObj.GetComponent<Pushing>().RemoveParent();
+                pushableObj = null;
+            }
+        }
 	}
 
 	void ClimbLadder(){
-		
+		    
 			myBody.useGravity = false;
 			myAnims.PlayClimbingUp();
 			myAnims.PauseClimbingAnimations();
 			isClimbing = true;
 			transform.position = new Vector3(ladderObj.transform.position.x,transform.position.y,transform.position.z);
-	
-	}
+    }
 
     void CullNext()
     {
@@ -364,7 +422,6 @@ public class PlayerControl : MonoBehaviour {
 
     void ThrowingAbility(int Strength)
     {
-       
         throwableObj.GetComponent<Throwing>().RemoveParent();
 
         //Dependant on direction
@@ -384,16 +441,28 @@ public class PlayerControl : MonoBehaviour {
     void PickUpThrowable()
     {
         //Check if an object is being held currently
-        if (isTouchingThrowable && !isHoldingThrowable)
+        if (isTouchingThrowable && !isHoldingThrowable && !isPickingUp)
         {
-            isHoldingThrowable = true;
-            throwableObj.GetComponent<Throwing>().SetParent();
+            myAnims.PickUpObject();
+            isPickingUp = true;
         }
         else if (isTouchingThrowable && isHoldingThrowable)
         {
             throwTimer += Time.deltaTime;
             isHoldingThrowable= false;
             wasHoldingThrowable = true;
+        }
+        else
+        {
+            if (myAnims.FinishedPickingUp())
+            {
+                isPickingUp = false;
+                if (isTouchingThrowable)
+                {
+                    isHoldingThrowable = true;
+                    throwableObj.GetComponent<Throwing>().SetParent();
+                }
+            }
         }
     }
 
@@ -475,6 +544,7 @@ public class PlayerControl : MonoBehaviour {
             if (isClimbing && col.transform.position.y < (this.transform.position.y + 0.1f))
             {
                 isClimbing = false;
+                myAnims.AfterClimb();
             }
 
             if (!isOnGround) {
@@ -506,7 +576,7 @@ public class PlayerControl : MonoBehaviour {
 		if (col.gameObject.tag == "Ladder") {
 			isTouchingLadder = true;
 			ladderObj = col.gameObject;
-		} else if(col.gameObject.tag != "Switch"){
+        } else if(col.gameObject.tag != "Switch"){
 			isTouchingLadder = false;
 		}
 

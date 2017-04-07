@@ -5,82 +5,82 @@ public class AnimationManager : MonoBehaviour {
 
 	//Used for animations
 	Animation myAnimation;
-	bool facingLeft;
+	bool facingLeft, climbing;
 
 	// Use this for initialization
 	void Start () {
 		myAnimation = gameObject.GetComponent<Animation>();
 
 		//Set all appropriate animations to loop and blend
-		myAnimation["walk"].wrapMode = WrapMode.Loop;
-		myAnimation["walk"].blendMode = AnimationBlendMode.Blend;
+		myAnimation["Walk"].wrapMode = WrapMode.Loop;
+		myAnimation["Walk"].blendMode = AnimationBlendMode.Blend;
 
-		myAnimation["idle"].wrapMode = WrapMode.Loop;
-		myAnimation["idle"].blendMode = AnimationBlendMode.Blend;
+		myAnimation["Idle"].wrapMode = WrapMode.Loop;
+		myAnimation["Idle"].blendMode = AnimationBlendMode.Blend;
 
-		myAnimation["run"].wrapMode = WrapMode.Loop;
-		myAnimation["run"].blendMode = AnimationBlendMode.Blend;
+		myAnimation["Run"].wrapMode = WrapMode.Loop;
+		myAnimation["Run"].blendMode = AnimationBlendMode.Blend;
 
-		myAnimation["Jump up"].blendMode = AnimationBlendMode.Blend;
+		myAnimation["Jump"].blendMode = AnimationBlendMode.Blend;
 
-		myAnimation["Fall / Drop"].blendMode = AnimationBlendMode.Blend;
-		myAnimation["Fall / Drop"].speed = 0.3f;
+		myAnimation["Fall"].blendMode = AnimationBlendMode.Blend;
+		myAnimation["Fall"].speed = 0.3f;
 
-		myAnimation["push"].wrapMode = WrapMode.Loop;
-		myAnimation["push"].blendMode = AnimationBlendMode.Blend;
+		myAnimation["Push"].wrapMode = WrapMode.Loop;
+		myAnimation["Push"].blendMode = AnimationBlendMode.Blend;
 
-		myAnimation["pull"].wrapMode = WrapMode.Loop;
-		myAnimation["pull"].blendMode = AnimationBlendMode.Blend;
+		myAnimation["Pull"].wrapMode = WrapMode.Loop;
+		myAnimation["Pull"].blendMode = AnimationBlendMode.Blend;
 
-		myAnimation["Up ladder"].wrapMode = WrapMode.Loop;
-		myAnimation["Up ladder"].blendMode = AnimationBlendMode.Blend;
+		myAnimation["Ladder"].wrapMode = WrapMode.Loop;
+		myAnimation["Ladder"].blendMode = AnimationBlendMode.Blend;
 
-		myAnimation["down ladder"].wrapMode = WrapMode.Loop;
-		myAnimation["down ladder"].blendMode = AnimationBlendMode.Blend;
+        myAnimation["Pick Up"].blendMode = AnimationBlendMode.Blend;
 
-	}
+        myAnimation["Throw"].blendMode = AnimationBlendMode.Blend;
+    }
 
 	// Play the idle animation
 	public void PlayIdle()
 	{
-		myAnimation.Play("idle");
+		myAnimation.Play("Idle");
 	}
 
 	public void PlayWalk(bool goingLeft)
 	{
 		ChoosingDirection(goingLeft);
-		myAnimation.Play("walk");
+		myAnimation.Play("Walk");
 	}
 
 	public void PlayRun(bool goingLeft)
 	{
 		ChoosingDirection(goingLeft);
-		myAnimation.Play("run");
+		myAnimation.Play("Run");
 	}
 
 	public void PlayPull(bool goingLeft)
 	{
 		ChoosingDirection(goingLeft);
-        myAnimation["pull"].speed = 1.0f;
-        myAnimation.Play("pull");
+        myAnimation["Pull"].speed = 1.0f;
+        myAnimation.Play("Pull");
 	}
 
 	public void PlayPush(bool goingLeft)
 	{
 		ChoosingDirection(goingLeft);
-        myAnimation["push"].speed = 1.0f;
-        myAnimation.Play("push");
+        myAnimation["Push"].speed = 1.0f;
+        myAnimation.Play("Push");
 	}
 
 	public void PlayJump()
 	{
-		myAnimation ["Jump up"].normalizedSpeed = 6f;
-		myAnimation.Play("Jump up");
+		myAnimation ["Jump"].normalizedSpeed = 6f;
+		myAnimation.Play("Jump");
 	}
 
 	public bool JumpingUp()
 	{
-		if (myAnimation["Jump up"].normalizedTime >= 0.8f)
+		if (myAnimation["Jump"].normalizedTime >= 0.8f)
 		{
 			return true;
 		}
@@ -90,50 +90,108 @@ public class AnimationManager : MonoBehaviour {
 		}
 	}
 
+    public bool FinishedPickingUp()
+    {
+        if (myAnimation["Pick Up"].normalizedTime >= 0.8f)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 	public void PlayFall()
 	{
-		myAnimation.Play("Fall / Drop");
+		myAnimation.Play("Fall");
 	}
 
     public void PlayClimbingUp()
     {
-        //Make sure the player faces the ladder
-        if(!facingLeft)
+        if(!climbing)
         {
-            facingLeft = true;
-            this.transform.Rotate(0.0f, 180.0f, 0.0f);
+            climbing = true;
+            if(facingLeft)
+            {
+                this.transform.Rotate(0, 90, 0);
+            }
+            else
+            {
+                this.transform.Rotate(0, -90, 0);
+            }
         }
 
         //Play the animation at normal speed
-        myAnimation["Up ladder"].speed = 1.0f;
-        myAnimation.Play("Up ladder");
+        myAnimation["Ladder"].speed = 1.0f;
+        myAnimation.Play("Ladder");
     }
 
     public void PlayClimbingDown()
     {
-        //Make sure the player faces the ladder
-        if (!facingLeft)
+        if (!climbing)
         {
-            facingLeft = true;
-            this.transform.Rotate(0.0f, 180.0f, 0.0f);
+            climbing = true;
+            if (facingLeft)
+            {
+                this.transform.Rotate(0, 90, 0);
+            }
+            else
+            {
+                this.transform.Rotate(0, -90, 0);
+            }
         }
-        
+
         //Play the animation at the correct speed
-        myAnimation["down ladder"].speed = 1.0f;
-        myAnimation.Play("down ladder");
+        myAnimation["Ladder"].speed = -1.0f;
+        myAnimation.Play("Ladder");
+    }
+
+    public void PickUpObject()
+    {
+        myAnimation.Play("Pick Up");
+    }
+
+    public bool ThrowReady()
+    {
+        if (myAnimation["Throw"].normalizedTime >= 0.4f)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool ThrowAnimationFinished()
+    {
+        if (myAnimation["Throw"].normalizedTime >= 0.9f)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void ThrowObject()
+    {
+        myAnimation.Play("Throw");
     }
 
     //Pause both the climbing animations
     public void PauseClimbingAnimations()
     {
-        myAnimation["Up ladder"].speed = 0.0f;
-        myAnimation["down ladder"].speed = 0.0f;
+        myAnimation["Ladder"].speed = 0.0f;
+        myAnimation["Ladder"].speed = 0.0f;
     }
 
     public void PausePushPull()
     {
-        myAnimation["push"].speed = 0.0f;
-        myAnimation["pull"].speed = 0.0f;
+        myAnimation["Push"].speed = 0.0f;
+        myAnimation["Pull"].speed = 0.0f;
     }
 
 	void ChoosingDirection(bool goingLeft)
@@ -158,19 +216,19 @@ public class AnimationManager : MonoBehaviour {
 
     public void PausePushPullAfter()
     {
-        if(myAnimation.IsPlaying("push"))
+        if(myAnimation.IsPlaying("Push"))
         {
             //Round to 1 d.p. in order to more easily check the animation is divisible by 1 roughly
-            float nonDecTime = (float)System.Math.Round(myAnimation["push"].normalizedTime, 1);
+            float nonDecTime = (float)System.Math.Round(myAnimation["Push"].normalizedTime, 1);
             
             if(nonDecTime % 1 == 0)
             {
                 PausePushPull();
             }
         }
-        else if(myAnimation.IsPlaying("pull"))
+        else if(myAnimation.IsPlaying("Pull"))
         {
-            float nonDecTime = (float)System.Math.Round(myAnimation["pull"].normalizedTime, 1);
+            float nonDecTime = (float)System.Math.Round(myAnimation["Pull"].normalizedTime, 1);
 
             if (nonDecTime % 1 == 0)
             {
@@ -182,6 +240,21 @@ public class AnimationManager : MonoBehaviour {
     public bool FacingLeft()
     {
         return facingLeft;
+    }
+
+    public void AfterClimb()
+    {
+        climbing = false;
+
+        if (!facingLeft)
+        {
+            facingLeft = true;
+            this.transform.Rotate(0.0f, -90.0f, 0.0f);
+        }
+        else if (facingLeft)
+        {
+            this.transform.Rotate(0.0f, -90.0f, 0.0f);
+        }
     }
 
 }

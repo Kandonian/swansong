@@ -8,7 +8,7 @@ public class ZoneCamSwitch : MonoBehaviour {
 	public int myRoomNumber;
 
 	void OnTriggerEnter(Collider col){
-		if(col.gameObject.name == "MyPlayer"){
+		if(col.gameObject.tag == "Player"){
 			myCam.currentRoom = myRoomNumber;
 		}
 	}
