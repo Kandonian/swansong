@@ -25,7 +25,7 @@ public class fade : MonoBehaviour {
 
     void FadeIn()
     {
-        speed /= 1.1f;
+        speed /= 1.001f;
         vignette -= (Time.deltaTime * speed);
 
         if(vignette <= 10)

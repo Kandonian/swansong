@@ -614,6 +614,11 @@ public class PlayerControl : MonoBehaviour {
     
     void OnTriggerStay(Collider col)
     {
+        if(col.gameObject.layer == LayerMask.NameToLayer("Ground") || col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
+        {
+            justAboveGround = true;
+        }
+
         //the collection for throwable objects
         if (col.gameObject.tag == "Throwable")
         {
