@@ -126,13 +126,11 @@ public class PlayerControl : MonoBehaviour {
             {
                 if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
                 {
-                    myAudio.Footsteps();
                     Move(false);
                 }
                 else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
                 {
                     Move(true);
-                    myAudio.Footsteps();
                 }
                 else {
                     myBody.velocity = new Vector3(0, myBody.velocity.y, myBody.velocity.z);
@@ -383,12 +381,14 @@ public class PlayerControl : MonoBehaviour {
 			myBody.velocity = new Vector3(moveSpeed,myBody.velocity.y,myBody.velocity.z);
 			if(isOnGround){
 				myAnims.PlayWalk(false);
+                myAudio.Footsteps();
 			}
 		} else {
 			myBody.velocity = new Vector3(-moveSpeed,myBody.velocity.y,myBody.velocity.z);
 			if(isOnGround){
 				myAnims.PlayWalk(true);
-			}
+                myAudio.Footsteps();
+            }
 		}
 	}
 
