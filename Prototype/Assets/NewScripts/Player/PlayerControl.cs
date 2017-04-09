@@ -653,11 +653,13 @@ public class PlayerControl : MonoBehaviour {
         if (col.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             justAboveGround = false;
+            isOnGround = false;
         }
 
         if(col.gameObject.layer == LayerMask.NameToLayer("Dropable"))
         {
             isAbleToDrop = false;
+            isOnGround = false;
             justAboveGround = false;
             myCurrentDropTime = 0.0f;
             if (!isClimbing)
