@@ -44,7 +44,7 @@ public class PlayerControl : MonoBehaviour {
 	bool isTouchingLadder;
 	GameObject ladderObj;
 	bool isClimbing;
-
+    public bool isUSING;
     //throwing
     bool isTouchingThrowable, isPickingUp, throwingPlaying;
     GameObject throwableObj;
@@ -164,7 +164,7 @@ public class PlayerControl : MonoBehaviour {
                 //If the push/pull ability is still in use
                 if (!cullPush)
                 {
-                    if (isTouchingDoor)
+                    if (isTouchingDoor && isOnGround)
                     {
                         if (!doorObj.GetComponent<Door>().isOpen)
                         {
