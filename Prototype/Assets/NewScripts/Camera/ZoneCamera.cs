@@ -17,6 +17,10 @@ public class ZoneCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		CamMove ();
+        if(currentRoom == 5)
+        {
+            GetComponent<CameraManager>().SwitchToFollow();
+        }
 	}
 
 	void CamMove(){
